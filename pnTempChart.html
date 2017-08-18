@@ -4,7 +4,19 @@
         <link type="text/css" rel="stylesheet" href="https://pubnub.github.io/eon/v/eon/1.0.0/eon.css"/>
     </head>
     <body>
-        <div id="chart"></div>
+        <style type="text/css">
+            .Division{
+            float: left;
+                width: 30%;
+                height: 40%;
+                margin-left: 10px;
+            }
+        </style>
+        <div id="chart">
+            <div id="spline" class="Division"></div>
+            <div id="bar" class="Division"></div>
+            <div id="gauge" class="Division"></div>
+        </div>
         <script>
 
             var pubnub = new PubNub({
@@ -14,12 +26,54 @@
                 channels: ['mrTemp'],
                 history: true,
                 flow: true,
+                limit: 30,
                 pubnub: pubnub,
                 generate: {
-                    bindto: '#chart',
+                    bindto: '#spline',
                     data: {
+                        colors: {"outside":"#6f9deb", "inside": "f07968"},
                         type: 'spline',
                         labels: true
+                    },
+                }
+            });
+            eon.chart({
+                channels: ['mrTemp'],
+                history: false,
+                flow: false,
+                pubnub: pubnub,
+                generate: {
+                    bindto: '#gauge',
+                    data: {
+                        colors: {"outside":"#6f9deb", "inside": "f07968"},
+                        type: 'pie',
+                        labels: true
+                    }
+                }
+            });
+            eon.chart({
+                channels: ['mrTemp'],
+                //xType: 'category',
+                history: false,
+                flow: false,
+                pubnub: pubnub,
+                generate: {
+                    bindto: '#bar',
+                    data: {
+                        colors: {"outside":"#6f9deb", "inside": "f07968"},
+                        type: 'bar',
+                        labels: true
+                    },
+                    bar: {
+                        width: {
+                            ratio: 0.5
+                        }
+                    },
+                    tooltip: {
+                        show: true
+                    },
+                    axis: {
+                        rotated: true
                     }
                 }
             });
