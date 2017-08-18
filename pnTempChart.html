@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://pubnub.github.io/eon/v/eon/1.0.0/eon.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://pubnub.github.io/eon/v/eon/1.0.0/eon.css"/>
+    </head>
+    <body>
+        <div id="chart"></div>
+        <script>
+
+            var pubnub = new PubNub({
+            subscribeKey: 'sub-c-6f342924-0468-11e7-b09b-0619f8945a4f'
+            });
+            eon.chart({
+                channels: ['mrTemp'],
+                history: true,
+                flow: true,
+                pubnub: pubnub,
+                generate: {
+                    bindto: '#chart',
+                    data: {
+                        type: 'spline',
+                        labels: true
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
