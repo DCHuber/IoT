@@ -24,20 +24,6 @@
                     },
                 }
             });
-            eon.chart({
-                channels: ['mrTemp'],
-                history: true,
-                flow: false,
-                pubnub: pubnub,
-                generate: {
-                    bindto: '#gauge',
-                    data: {
-                        colors: {"outside":"#6f9deb", "inside": "f07968"},
-                        type: 'pie',
-                        labels: true
-                    }
-                }
-            });
         </script>
     </body>
 </html>
