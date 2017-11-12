@@ -1,0 +1,11 @@
+[Unit]
+Description=Send Temp Data to FedApps as JSON
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/Projects/acmeFactory/acmeSendTemp.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
