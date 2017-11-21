@@ -11,6 +11,7 @@
 
 * Create the scheduled task by runing the crontab command - the first time might have you select an editor - I use nano
   * ``` crontab -e ```
+  
   Add to the last line
      * ```	*/5 * * * * /usr/bin/python3 /home/pi/Projects/acmeFactory/acmeSendTemp.py ```
      
