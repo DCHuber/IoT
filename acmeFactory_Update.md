@@ -13,3 +13,7 @@
   * ``` crontab -e ```
   * Add to the last line
      * ```	*/5 * * * * /usr/bin/python3 /home/pi/Projects/acmeFactory/acmeSendTemp.py ```
+     
+* If you want to see if everything is working you can run this command
+  * ```tail -f /home/pi/Projects/acmeFactory/logs/temp.log```
+
