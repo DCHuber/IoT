@@ -4,6 +4,7 @@ from w1thermsensor import W1ThermSensor
 import requests, json
 import logging
 from logging.handlers import TimedRotatingFileHandler
+from time import gmtime, strftime
 
 #Setup logging information
 logger = logging.getLogger(__name__)
@@ -14,7 +15,7 @@ formatter = logging.Formatter('%(asctime)s,%(message)s', datefmt='%Y-%m-%d %H:%M
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 
-
+datetime = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 sensor = W1ThermSensor()
 tempID = sensor.id
 
@@ -22,7 +23,7 @@ postURL = ''
 
 try:
 	rmTemp = sensor.get_temperature(W1ThermSensor.DEGREES_F)
-	requests.post(postURL, json={'definition': 'acmeTemps', 'id': tempID, 'tempF':  rmTemp, 'lat': 39.010793, 'lon': -105.050999})
+	requests.post(postURL, json={'datetime': 'datetime', 'id': tempID, 'tempF':  rmTemp})
 	logger.info('%s,%f', tempID, rmTemp)
 except:
 	logger.debug ("Error publishing temp")
