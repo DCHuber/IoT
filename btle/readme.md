@@ -19,13 +19,14 @@ For Python 3, you may need to use `pip3`:
     $ sudo apt-get install python3-pip libglib2.0-dev
     $ sudo pip3 install bluepy
 
+    
+Code Installation
+------------
 
 Once installed you can download and run the [testBLE.py](https://github.com/DCHuber/IoT/blob/master/btle/testBLE.py) code to see if it is working
 
     $ sudo python3 testBLE.py
     
-Code Installation
-------------
 Finally, download and configure the scanner code [btleScanner.py](https://github.com/DCHuber/IoT/blob/master/btle/btleScanner.py) to run as a cron job on your system.  
 
  - The code file has comments on how to setup, but if you leave the default folder values in the code you have the same folders configured on your system.   Create the folders and copy the code into `bluePy`
