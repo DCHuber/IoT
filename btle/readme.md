@@ -4,10 +4,9 @@ Blue Tooth Low Energy Setup
 Using the python library from Ian Harvey - [Bluepy](https://github.com/IanHarvey/bluepy) to scan for btle devices
 
 
-Installation
+Libray Installation
 ------------
-
-For python:
+For python library:
 
 To install the current released version, on most Debian-based systems:
 
@@ -25,7 +24,8 @@ Once installed you can download and run the [testBLE.py](https://github.com/DCHu
 
     $ sudo python3 testBLE.py
     
-
+Code Installation
+------------
 Finally, download and configure the scanner code [btleScanner.py](https://github.com/DCHuber/IoT/blob/master/btle/btleScanner.py) to run as a cron job on your system.  
 
     #Create entry in the cron task manager
@@ -38,6 +38,6 @@ Finally, download and configure the scanner code [btleScanner.py](https://github
 
 To view the logging data in real time, you can use the `tail` command:
 
-    $ tail -f <path to log file>    ie:  tail -f Projects/bluePy/logs/btleScan.csv
+    $ tail -f <path to log file>    ie:  tail -f Projects/bluePy/logs/btlescan.csv
 
 
