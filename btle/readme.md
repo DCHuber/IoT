@@ -1,7 +1,7 @@
 Blue Tooth Low Energy Setup
 ======
 
-Using the python library from Ian Harvey - Bluepy (https://github.com/IanHarvey/bluepy) to scan for btle devices
+Using the python library from Ian Harvey - [Bluepy](https://github.com/IanHarvey/bluepy) to scan for btle devices
 
 
 Installation
@@ -21,9 +21,11 @@ For Python 3, you may need to use `pip3`:
     $ sudo pip3 install bluepy
 
 
-Once installed you can use run the testBLE.py (https://github.com/DCHuber/IoT/blob/master/btle/testBLE.py) code to see if it is working
+Once installed you can download and run the [testBLE.py](https://github.com/DCHuber/IoT/blob/master/btle/testBLE.py) code to see if it is working
 
     $ sudo python3 testBLE.py
+    
 
+Finally, download and configure the scanner code [btleScanner.py](https://github.com/DCHuber/IoT/blob/master/btle/btleScanner.py) to run as a cron job on your system.  
 
 
