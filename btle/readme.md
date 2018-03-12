@@ -28,6 +28,11 @@ Code Installation
 ------------
 Finally, download and configure the scanner code [btleScanner.py](https://github.com/DCHuber/IoT/blob/master/btle/btleScanner.py) to run as a cron job on your system.  
 
+ - The code file has comments on how to setup, but if you leave the default folder values in the code you have the same folders configured on your system.   Create the folders and copy the code into `bluePy`
+ 
+        $ mkdir Projects/bluePy
+        $ mkdir Projects/bluePy/logs
+        
  - Create entry in the cron task manager
    
         $ crontab -e     -- first time you may need to specify editor.  Choose the default [2] nano
