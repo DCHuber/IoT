@@ -25,13 +25,13 @@ class ScanDelegate(DefaultDelegate):
 		DefaultDelegate.__init__(self)
 
 	def handleDiscovery(self, dev, isNewDev, isNewData):
-    for (adtype, desc, value) in dev.getScanData()
-      if adtype == 9:    #Has name of device
-        device = value
-      else:
-        device = "unknown"
-        
-    address = dev.addr.replace(":", "")
+		for (adtype, desc, value) in dev.getScanData():
+			if adtype == 9:    #Has name of device
+				device = value
+			else:
+				device = "unknown"
+			
+		address = dev.addr.replace(":", "")
 		logger.info('%s,%s,%s,%f', nodeID, address, device, dev.rssi)
 
 
