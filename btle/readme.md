@@ -21,9 +21,9 @@ For Python 3, you may need to use `pip3`:
     $ sudo pip3 install bluepy
 
 
-Once installed you can use run the 'testBLE.py' code to see if it is working
+Once installed you can use run the testBLE.py (https://github.com/DCHuber/IoT/blob/master/btle/testBLE.py) code to see if it is working
 
-  $ sudo python3 testBLE.py
+    $ sudo python3 testBLE.py
 
 
 
