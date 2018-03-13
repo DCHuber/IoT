@@ -46,7 +46,7 @@ Finally, download and configure the scanner code [btleScanner.py](https://github
  
         * * * * * sudo /usr/bin/python3 /home/pi/Projects/bluePy/btleScanner.py
     
-  #To save the file, press Ctrl-X  followed by `Y` for yes   followed by `Enter`
+    To save the file, press Ctrl-X  followed by `Y` for yes   followed by `Enter`
 
  5. To view the logging data in real time, you can use the `tail` command:
 
