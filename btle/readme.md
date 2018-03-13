@@ -10,11 +10,7 @@ For python library:
 
 To install the current released version, on most Debian-based systems:
 
-    $ sudo apt-get install python-pip libglib2.0-dev
-    $ sudo pip install bluepy
-    
-
-For Python 3, you may need to use `pip3`:
+For Python 3, which I assume you are using in my examples, you may need to use `pip3`:
 
     $ sudo apt-get install python3-pip libglib2.0-dev
     $ sudo pip3 install bluepy
