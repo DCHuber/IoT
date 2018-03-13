@@ -1,4 +1,4 @@
-Blue Tooth Low Energy Setup
+Bluetooth Low Energy Setup
 ======
 
 Using the python library from Ian Harvey - [Bluepy](https://github.com/IanHarvey/bluepy) to scan for btle devices
@@ -25,7 +25,7 @@ Once installed you can download and run the [testBLE.py](https://github.com/DCHu
     
 Finally, download and configure the scanner code [btleScanner.py](https://github.com/DCHuber/IoT/blob/master/btle/btleScanner.py) to run as a cron job on your system.  
 
- - The code file has comments on how to setup, but if you leave the default folder values in the code you have the same folders configured on your system.   Create the folders and copy the code into `bluePy`   NOTE:  Ensure you at least edit the value for `nodeID`
+ 1. The code file has comments on how to setup, but if you leave the default folder values in the code you have the same folders configured on your system.   Create the folders and copy the code into `bluePy`   NOTE:  Ensure you at least edit the value for `nodeID`
  
         $ mkdir Projects/bluePy
         $ mkdir Projects/bluePy/logs
