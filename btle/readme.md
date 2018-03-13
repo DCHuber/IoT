@@ -25,22 +25,30 @@ Once installed you can download and run the [testBLE.py](https://github.com/DCHu
     
 Finally, download and configure the scanner code [btleScanner.py](https://github.com/DCHuber/IoT/blob/master/btle/btleScanner.py) to run as a cron job on your system.  
 
- 1. The code file has comments on how to setup, but if you leave the default folder values in the code you have the same folders configured on your system.   Create the folders and copy the code into `bluePy`   NOTE:  Ensure you at least edit the value for `nodeID`
+ 1. Create the folders needed to host the code
  
         $ mkdir Projects/bluePy
         $ mkdir Projects/bluePy/logs
         
- - Create entry in the cron task manager
+ 2.  Download the code referenced above and place it in the `/Projects/bluePy` folder
+ 
+ 3. Edit the `nodeID` field to use your devices local btle MAC address.   To get the address, execute the command:
+        
+        $ hciconfig
+     
+    Copy the MAC address and edit it to remove the ":" and lower case the letters:  ie: "b827eb01c055"
+ 
+ 4. Schedule the code to run once a minute by creating an entry in the cron task manager
    
-        $ crontab -e     -- first time you may need to specify editor.  Choose the default [2] nano
+        $ crontab -e     #NOTE: first time you may need to specify editor.  Choose the default [2] nano
 
- - add the following line, which will run each minute.  Edit paths if you are storing the code elsewhere
+    Add the following line at the end of the file.  If you created your directories in a different path than what is recommended in Step 1, edit the paths
  
         * * * * * sudo /usr/bin/python3 /home/pi/Projects/bluePy/btleScanner.py
     
- - To save the file, press Ctrl-X  followed by `Y` for yes   followed by `Enter`
+  #To save the file, press Ctrl-X  followed by `Y` for yes   followed by `Enter`
 
- - To view the logging data in real time, you can use the `tail` command:
+ 5. To view the logging data in real time, you can use the `tail` command:
 
         $ tail -f <path to log file>    ie:  $ tail -f Projects/bluePy/logs/btlescan.csv
 
