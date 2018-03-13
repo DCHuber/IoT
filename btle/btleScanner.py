@@ -17,7 +17,7 @@ logger.addHandler(handler)
 
 #Enter an id for the node - recommend the scanner node MAC address.  Ie: "b827eb01c055" 
 #You can obtain your devices blue tooth MAC address by executing the command: 'hciconfig'  It will be the "BD Address" value.  
-#Remove the ':' between values
+#Remove the ':' between values and change to lower case
 nodeID = "<your unique ID>"   
 
 class ScanDelegate(DefaultDelegate):
