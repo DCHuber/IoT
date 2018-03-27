@@ -23,7 +23,7 @@ postURL = ''
 
 try:
 	rmTemp = sensor.get_temperature(W1ThermSensor.DEGREES_F)
-	requests.post(postURL, json={'datetime': 'datetime', 'id': tempID, 'tempF':  rmTemp})
+	requests.post(postURL, json={'datetime': datetime, 'id': tempID, 'tempF':  rmTemp})
 	logger.info('%s,%f', tempID, rmTemp)
 except:
 	logger.debug ("Error publishing temp")
