@@ -1,0 +1,11 @@
+[Unit]
+Description=BTLE Scanner
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/Projects/bluePy/btleScanner2.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
